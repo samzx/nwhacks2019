@@ -10,9 +10,10 @@ import Map from './components/Map';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello World!</h1>
-        <Map/>
+      <div className="app">
+        <div className="activity">
+          <Map/>
+        </div>
         <Menu/>
       </div>
     );
