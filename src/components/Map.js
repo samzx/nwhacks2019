@@ -41,6 +41,7 @@ class Map extends React.Component {
   render(){
     return (
       <div>
+      <div className="logo">News Radar</div>
         {
           this.state.loading && 
           <div style={{position: "fixed", zIndex: 200000, width: "100%", textAlign: "center"}}>
