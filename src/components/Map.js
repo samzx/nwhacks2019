@@ -43,7 +43,10 @@ class Map extends React.Component {
       <div>
         {
           this.state.loading && 
-          <h1 style={{position: "fixed", zIndex: 200000, width: "100%", textAlign: "center"}}>Loading</h1>
+          <div style={{position: "fixed", zIndex: 200000, width: "100%", textAlign: "center"}}>
+            <h1>Loading</h1>
+            <i>If using iOS, go to Privacy > Location Services > Safari Websites > allow location access</i>
+          </div>
         }
         <div id="mapid"></div>
       </div>
