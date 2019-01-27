@@ -1,17 +1,23 @@
 import React from 'react';
 
 class Map extends React.Component {
+  state = {
+    loading: true
+  }
 
   componentDidMount(){
-    this.map = L.map('mapid').setView([0, 0], 13);
+    this.map = L.map('mapid').setView([0, 0], 8);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
     var heat = L.heatLayer([
-      [50.5, 30.5, 0.2], // lat, lng, intensity
-      [50.6, 30.4, 2000],
+      [50.1163, -122.9574, 100], //whistler
+      [49.2798, -123.2425, 100], //wreck beach
+      [49.2624, -123.2449, 100], // life sceinces
+      [49.2768, -123.1120, 100], // bc place
+      [49.2888, -123.1111, 100] // canada place
     ], {radius: 25}).addTo(this.map);
 
     this.getLocation();
@@ -29,11 +35,16 @@ class Map extends React.Component {
     const lat = position.coords.latitude;
     const long = position.coords.longitude;
     this.map.panTo(new L.LatLng(lat, long))
+    this.setState(() => ({loading: false}))
   }
 
   render(){
     return (
       <div>
+        {
+          this.state.loading && 
+          <h1 style={{position: "fixed", zIndex: 200000, width: "100%", textAlign: "center"}}>Loading</h1>
+        }
         <div id="mapid"></div>
       </div>
     )

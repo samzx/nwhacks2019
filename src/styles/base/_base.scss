@@ -40,10 +40,72 @@ body {
 }
 
 .activity {
- background: rgb(204, 220, 204);
  overflow: scroll;
+ height: calc(100vh - 75px);
+}
+
+.activity-inner {
+  padding: 0rem 1rem;
 }
 
 #mapid {
   height: calc(100vh - 76px);
+}
+
+.new-post{
+  border: 0px solid black;
+  display: block;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  height: 20rem;
+  box-shadow: inset 0px 0px 5px 0px #ddd;
+}
+
+.new-title {
+  border: 0px solid black;
+  display: block;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  box-shadow: inset 0px 0px 5px 0px #ddd;
+  margin: 1rem 0;
+}
+
+.submit{
+  border: 1px solid black;
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  border-radius: 5px;
+}
+
+.thread {
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 0px #eee;
+  margin: 1rem 0;
+}
+
+.thread h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.thread-points {
+  display: inline-block;
+}
+
+.thread-comments {
+  display: inline-block;
+}
+
+.thread-distance {
+  display: inline-block;
+}
+
+.thread-time {
+  display: inline-block;
+}
+
+.thread-details {
+  display: flex;
+  justify-content: space-between;
 }

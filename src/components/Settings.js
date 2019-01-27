@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Settings = (props) => (
-  <div>
-    Hi I'm a Settings
+  <div className="activity-inner">
+    <h1>Settings</h1>
   </div>
 )
 
